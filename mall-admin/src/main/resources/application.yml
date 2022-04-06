@@ -8,6 +8,9 @@ spring:
       enabled: true #开启文件上传
       max-file-size: 10MB #限制文件上传大小为10M
 
+server:
+  port: 8082
+
 mybatis:
   mapper-locations:
     - classpath:dao/*.xml
@@ -49,10 +52,10 @@ secure:
 
 aliyun:
   oss:
-    endpoint: oss-cn-shenzhen.aliyuncs.com # oss对外服务的访问域名
-    accessKeyId: test # 访问身份验证中用到用户标识
-    accessKeySecret: test # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
-    bucketName: macro-oss # oss的存储空间
+    endpoint: oss-cn-shanghai.aliyuncs.com # oss对外服务的访问域名
+    accessKeyId: LTAI5t6GCaU2hnGa97zXp2vm # 访问身份验证中用到用户标识
+    accessKeySecret: 7yUWCPgOgCssaw0efcLFvtZQQe7Y5l # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
+    bucketName: mall-xialj-oss # oss的存储空间
     policy:
       expire: 300 # 签名有效期(S)
     maxSize: 10 # 上传文件大小(M)
