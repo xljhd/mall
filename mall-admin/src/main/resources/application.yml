@@ -49,6 +49,8 @@ secure:
       - /admin/info
       - /admin/logout
       - /minio/upload
+      - /product/list
+      - /home/advertise/list
 
 aliyun:
   oss:

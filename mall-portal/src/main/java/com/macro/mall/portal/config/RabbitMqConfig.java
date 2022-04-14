@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * 消息队列相关配置
  * Created by macro on 2018/9/14.
  */
-@Configuration
+//@Configuration
 public class RabbitMqConfig {
 
     /**

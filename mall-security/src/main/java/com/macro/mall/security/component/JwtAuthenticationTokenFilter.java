@@ -38,6 +38,14 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain chain) throws ServletException, IOException {
         String authHeader = request.getHeader(this.tokenHeader);
+        if (request.getRequestURI().equals("/sso/register")) {
+            chain.doFilter(request, response);
+            return;
+        }
+        if (request.getRequestURI().equals("/sso/getAuthCode")) {
+            chain.doFilter(request, response);
+            return;
+        }
         if (authHeader != null && authHeader.startsWith(this.tokenHead)) {
             String authToken = authHeader.substring(this.tokenHead.length());// The part after "Bearer "
             String username = jwtTokenUtil.getUserNameFromToken(authToken);
